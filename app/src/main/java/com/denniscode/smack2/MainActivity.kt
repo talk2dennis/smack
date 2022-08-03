@@ -1,7 +1,10 @@
 package com.denniscode.smack2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -40,6 +43,10 @@ class MainActivity : AppCompatActivity() {
     // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
+    }
+    fun navLoginBtnClicked (view: View) {
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
 
     override fun onBackPressed() {
